@@ -1,0 +1,39 @@
+:root{
+   --primary: #6C63FF;
+   --dark:#111;
+   --light:#fff;
+   --gray:#f5f5f5;
+   --text-main:#334155;
+   --fontTitle:'Montserrat' , sans-serif;
+   --fontText:'Poppins' ,sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:var(--fontText);
+    color:var(--text);
+    background: var(--light);
+    
+
+}
+
+.navbar{
+    background: white;
+    transition: var(--transition);
+    padding: 5px 0;
+}
+
+h1,h2,h3{
+    font-family: var(--fontTitle);
+}
+
+.btn-primary{
+    background: var(--primary);
+    border: none;
+}
