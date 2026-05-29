@@ -121,7 +121,8 @@ form button{
 
 
 .carousel-item{
-    padding: 40px 20px;
+    padding: 30px 20px;
+   
 }
  /* bento grid */
 .bento-grid{
@@ -246,3 +247,134 @@ form button{
 .footer li{
     margin-bottom: 10px;
 }
+
+/* ANIMATIONS */
+.hero h1,
+.hero h2,
+.hero a{
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+    opacity: 0;
+    transform: translateY(30px);
+    
+}
+
+to{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* HOVER NAVBAR*/
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: var(--primary);
+}
+
+/*Boutons */
+.btn{
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+/* images */
+img{
+    max-width: 100%;
+}
+
+/* responsive tablet */
+@media(max-width:992px){
+    .hero h1{
+        font-size: 35px;
+}
+    .bento-grid{
+        grid-template-columns: 1fr 1fr;
+}
+}
+
+/* responsive mobile */
+@media(max-width:768px){
+
+.navbar{
+    padding: 10px;
+}    
+.hero{
+    padding: 120px 20px;
+}    
+
+.hero h1{
+    font: size 35px;
+}
+
+.hero h2{
+    font-size: 16px;
+}
+.bento-grid{
+    grid-template-columns: 1fr 1fr;
+}
+.box1,
+box2{
+    grid-column:auto;
+    grid-row: auto;
+}
+.stats .col-md-4{
+    margin-bottom: 20px;
+}
+.category{
+    margin-bottom: 20px;
+}
+.carousel-item{
+    padding: 20px;
+}
+
+.cta h2{
+    font-size: ;
+}
+.footer{
+    text-align: center;
+}
+}
+
+/*petits telephone */
+@media(max-width:480px){
+
+    .hero h1{
+        font-size: 24px;
+}
+    .hero h2{
+        font-size: 14px;
+ }
+
+    .btn{
+        width: 100%;
+        margin-top: 10px;
+}
+
+    .box{
+        padding: 20px;
+}
+}
+
+/*desktop */
+@media(max-width:1200px){
+
+    .container{
+        max-width: 1140px;
+}
+    .hero{
+        font-size: 60px;
+}
+}
+
+
