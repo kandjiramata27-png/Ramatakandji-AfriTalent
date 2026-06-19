@@ -15,92 +15,93 @@ rel="stylesheet">
 <body> 
       
 <header> 
-    <nav class="navbar navbar-expand">
+    <nav id="navbar" class="navbar navbar-expand">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"></a>
 
-        <a class="navbar-brand" href="index.html"></a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
 
-        <span class="navbar-toggler-icon"></span>
+                </button>
 
-
-        </button>
- </nav>
-        <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        </nav>
+        <nav id="navbar1" class=" navbar navbar-expand-lg fixed-top">
 
             <div class="container">
                 <a class="navbar-brand" href="index.html"> <img src="images/Logo.png" width="40" alt="Logo AfriTalent"
                         class="Logo" href="#">AfriTalent</a>
 
             </div>
-            
             <div class="collapse navbar-collapse w-75" id="menu">
 
-        
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarisf.html">Tarisf</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact..html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="darkModeBtn"  class="btn btn-sm btn-outline-secondary">🌙</button>
+                    </li>
+                </ul>
+            </div>
+            <li class="nav-item ms-lg-3">
+                <a class="btn btn-primary rounded-pill px-4" href="#">Rejoindre AfriTalent</a>
+            </li>
+            </div>
+        </nav>
 
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="freelances.html">freelances</a></li>
-                <li class="nav-item"><a class="nav-link" href="tarisf.html">Tarisf</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">Apropos</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact..html">Contact</a></li>
-                <li class="nav-item ms-lg-3">
-
-                      <button id="theme-toggle" class="btn btn-sm btn-outline-secondary">🌙</button>
-
-                </li>
-            </ul>
-
-                  <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary rounded-pill px-4" href="#">Rejoindre AfriTalent</a>
-                 </li>
-
-        </div>
-    </nav>
+     
     
 </header>
 
         <div class="container" style="margin-top: 120px;">
+
             <h1 class="text-center mb-5">Contact</h1>
 
-             <form id="contactform">
-
+             <div class="col-lg-6">
+             <form id="contactForm">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
 
-                        <input type="text" class="form-control mb-3" placeholder="Nom" required>
+                        <input id="nom" type="text" class="form-control mb-3" placeholder="nom" required>
+                        <small class="text-danger"></small>
                         
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                     
-                        <input type="text" class="form-control mb-3" placeholder="Prenom" required>
+                        <input id="prenom" type="prenom" class="form-control mb-3" placeholder="Prenom" required>
+                        <small class="text-danger"></small>
 
                     </div>
+               
+                <div class="col-md-6 mb-3">
+
+                   <input id="email" type="email" class="form-control" placeholder="email" required>
+                   <small  class="text-danger"></small>
+
                 </div>
+    
+        
 
-                <input type="email" class="form-control mb-3" placeholder="Email" required>
-
-                <select class="form-control mb-3">
-
-                    <option>Sujet</option>
-                    <option>Support</option>
-                    <option>Question</option>
-
-                </select>
-
-                <textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
+                <textarea id="message" class="form-control" rows="4" placeholder="message"></textarea>
+                <small class="text-danger"></small>
 
                 <button class="btn btn-primary">Envoyer</button>
 
-                <p id="success" class="text-success mt-3"></p>
+                <p id="successMessage"  class="text-success mt-3"></p></p>
 
-             </form>
-             <div id="successMessage" class="alert alert-success mt-3 d-none">
-                            <p>Merci ! Votre message a été envoyé avec succès.</p>
+            
+                       <div  class="alert alert-success mt-3 d-none">
+                            <p>Merci ! Votre message a été envoyé avec succès!</p>
                         </div>
-
+               
+             
+             </form>
+             </div>
+             </body>
              <div class="info">
                 <div class="col-md-6">
 
@@ -123,15 +124,10 @@ rel="stylesheet">
         
         </div>
     </div>
-
+</main>
     <!--CTA-->
-    <section class="cta text-center">
-        <h2>Rejoignez la communaute AfriTalent</h2>
+    
 
-        <a class="btn btn-light mt-3" href="#">S'inscrite</a>
-
-    </section>
- </main>
 
     <footer class="footer">
 
@@ -147,7 +143,7 @@ rel="stylesheet">
                 <div class="col-md-3">
                     <h5>Liens</h5>
                     <ul>
-                        <li><a href="">Accueil</a></li>
+                        <li><a href="index.html">Accueil</a></li>
                         <li><a href="freelances.html">Freelances</a></li>
                         <li><a href="about.html">Apropos</a></li>
                         <li><a href="contact..html">contact</a></li>
