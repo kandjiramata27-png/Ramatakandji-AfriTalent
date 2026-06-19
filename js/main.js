@@ -54,7 +54,76 @@ darkmode.addEventListener('click', () => {
 
            
 
+/* fade-in */
+const sections = document.querySelectorAll(".fade-in");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
 
+sections.forEach((section) => {
+    observer.observe(section);
+});
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            const counter = entry.target;
+            const target = +counter.dataset.target;
+
+            let count = 0;
+
+            const updateCounter = () => {
+
+                const increment = target / 100;
+
+                if (count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
+
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCounter();
+            counterObserver.unobserve(counter);
+        }
+    });
+});
+
+    counters.forEach((counter) => {
+    counterObserver.observe(counter);
+});
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const freelancerCards = document.querySelectorAll(".freelancer-card");
+
+    filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+    const category = button.dataset.category;
+
+    freelancerCards.forEach(card => {
+
+      if (category === "all" || card.dataset.category === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+  });
+});
 
 
    
