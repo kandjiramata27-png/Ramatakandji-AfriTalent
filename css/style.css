@@ -137,6 +137,13 @@ form button{
     border-radius: 10px;
 }
 
+/* Question */
+
+.collapse{
+    display: block;
+}
+
+
 /* temoignages */
 
 
